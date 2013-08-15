@@ -7,7 +7,7 @@ var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
 var loginpage = require('./routes/loginpage');
-var lastpage = require('./routes/lastpage');
+var submission = require('./routes/submission');
 var http = require('http');
 var path = require('path');
 
@@ -33,8 +33,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/login', loginpage.login);
-app.get('/last',lastpage.last);
+app.get('/', loginpage.login);
+app.post('/submit',submission.submit);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){

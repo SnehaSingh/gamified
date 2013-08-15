@@ -12,7 +12,7 @@
     <p>Welcome to <%= title %></p> -->
     <div class="container">
     <h1>Welcome to Gamified</h1>
-       <form class="" name="form1" action="/login">
+       <form class="" name="form1" method="POST" action="/submit">
        	<div class="row">
        		<div class="span4 offset3">
        			<label>Q1. Why is polymorphism necessary?</label>
@@ -34,9 +34,18 @@
        			</label>
        		</div>
        	</div>
+        <div class="row">
+          <div class="span4 offset3">
+            <label class="radio">
+              <input type="radio" name="q1radio" id="q1radio3" value="option3">
+              Testability
+            </label>
+          </div>
+        </div>
+
        	<div class="row">
        		<div class="span4 offset3">
-       				<button class="btn btn-primary" type="button" action="/last">Next</button>
+            <input type="submit" value="Done">       			
        		</div>
        	</div>
        	
