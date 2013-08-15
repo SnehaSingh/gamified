@@ -8,12 +8,39 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <!--<h1><%= title %></h1>
+    <p>Welcome to <%= title %></p> -->
     <div class="container">
     <h1>Welcome to Gamified</h1>
-       <form class="form-signin" name="form1" action="/login">
-       <div class="row">
+       <form class="" name="form1" action="/login">
+       	<div class="row">
+       		<div class="span4 offset3">
+       			<label>Q1. Why is polymorphism necessary?</label>
+       		</div>
+       	</div>
+       	<div class="row">
+       		<div class="span4 offset3">
+       			<label class="radio">
+       				<input type="radio" name="q1radio" id="q1radio1" value="option1">
+       				Reusability
+       			</label>
+       		</div>
+       	</div>
+       	<div class="row">
+       		<div class="span4 offset3">
+       			<label class="radio">
+       				<input type="radio" name="q1radio" id="q1radio2" value="option2">
+       				Extensibility
+       			</label>
+       		</div>
+       	</div>
+       	<div class="row">
+       		<div class="span4 offset3">
+       				<button class="btn btn-primary" type="button" action="/last">Next</button>
+       		</div>
+       	</div>
+       	
+       <!--<div class="row">
           <div class="span4 offset2">
                <input type="text" name="username" class="input-block-level" placeholder="User name"/>
           </div>
@@ -27,7 +54,7 @@
           <div class="span4 offset2">
               <button class="" type="submit">Sign in</button>
           </div>
-       </div>
+       </div> -->
             <script src="http://code.jquery.com/jquery.js"></script>
             <script src="js/bootstrap.min.js"></script>
        </form>
