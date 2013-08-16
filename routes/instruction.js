@@ -1,7 +1,6 @@
 var redis = require('redis');
 var db = redis.createClient();
 
-
 exports.instructor = function(req, res){
     db.mget("op1","op2","op3", function (err, reply) {
 		var data = {};
