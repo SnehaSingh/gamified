@@ -40,9 +40,5 @@ exports.submit = function(req, res){
     });
   	console.log("DEBUG: option3 selected");
   }
-
-  //console.log(req.param('q1radio'));
-
-   
-  res.send("This is the submission");
+  res.render('submitted'); 
 };
