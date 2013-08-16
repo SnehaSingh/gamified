@@ -9,7 +9,12 @@ exports.instructor = function(req, res){
     db.mget("op1","op2","op3", function (err, reply) {
 		var data = {};
         reply.forEach(function (reply, index) {
-        		data[index] = reply.toString();
+        		if(reply == null){
+        			data[index] = 0;
+        		}
+        		else {
+	        		data[index] = reply.toString();
+        		}
         });
 	    res.render('instructor', { data: data});	
     });
