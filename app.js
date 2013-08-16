@@ -8,6 +8,7 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var loginpage = require('./routes/loginpage');
 var submission = require('./routes/submission');
+var instruction = require('./routes/instruction');
 var http = require('http');
 var path = require('path');
 
@@ -34,7 +35,8 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/', loginpage.login);
-app.post('/submit',submission.submit);
+app.post('/submit', submission.submit);
+app.get('/instructor', instruction.instructor);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
