@@ -1,72 +1,149 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
-  </head>
-  <body>
-    <!--<h1><%= title %></h1>
-    <p>Welcome to <%= title %></p> -->
-    <div class="container">
-    <h1>Welcome to Gamified</h1>
-       <form class="" name="form1" method="POST" action="/submit">
-       	<div class="row">
-       		<div class="span4 offset3">
-       			<label>Q1. Why is polymorphism necessary?</label>
-       		</div>
-       	</div>
-       	<div class="row">
-       		<div class="span4 offset3">
-       			<label class="radio">
-       				<input type="radio" name="q1radio" id="q1radio1" value="option1">
-       				Reusability
-       			</label>
-       		</div>
-       	</div>
-       	<div class="row">
-       		<div class="span4 offset3">
-       			<label class="radio">
-       				<input type="radio" name="q1radio" id="q1radio2" value="option2">
-       				Extensibility
-       			</label>
-       		</div>
-       	</div>
-        <div class="row">
-          <div class="span4 offset3">
-            <label class="radio">
-              <input type="radio" name="q1radio" id="q1radio3" value="option3">
-              Testability
-            </label>
-          </div>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gamified</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-       	<div class="row">
-       		<div class="span4 offset3">
-            <input type="submit" value="Done">       			
-       		</div>
-       	</div>
-       	
-       <!--<div class="row">
-          <div class="span4 offset2">
-               <input type="text" name="username" class="input-block-level" placeholder="User name"/>
-          </div>
-       </div>
-       <div class="row">
-          <div class="span4 offset2">
-               <input type="password" name="password" class="input-block-level" placeholder="Password"/>
-          </div>
-       </div>
-       <div class="row">
-          <div class="span4 offset2">
-              <button class="" type="submit">Sign in</button>
-          </div>
-       </div> -->
-            <script src="http://code.jquery.com/jquery.js"></script>
-            <script src="javascripts/bootstrap.min.js"></script>
-       </form>
+  <!-- Le styles -->
+  <link href="stylesheets/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .sidebar-nav {
+    padding: 9px 0;
+  }
+
+  @media (max-width: 980px) {
+    /* Enable use of floated navbar text */
+    .navbar-text.pull-right {
+      float: none;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  </style>
+  <link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="/">Gamified</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/instructor">Instructors</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span6" >
+        <div class="well">
+          <div style="padding-left: 50px;">
+           <form name="form1" method="POST" action="/submit">
+            <div class="row">
+              <div>
+                <label><h3>Q1. Why is polymorphism necessary?</h3></label>
+              </div>
+              <hr/>
+            </div>
+            <div class="row">
+              <div>
+                <label class="radio">
+                  <input type="radio" name="q1radio" id="q1radio1" value="option1">
+                  Reusability
+                </label>
+              </div>
+            </div>
+            <br/>
+            <div class="row">
+              <div>
+                <label class="radio">
+                  <input type="radio" name="q1radio" id="q1radio2" value="option2">
+                  Extensibility
+                </label>
+              </div>
+            </div>
+            <br/>
+
+            <div class="row">
+              <div>
+                <label class="radio">
+                  <input type="radio" name="q1radio" id="q1radio3" value="option3">
+                  Testability
+                </label>
+              </div>
+            </div>
+            <br/>
+            <div class="row">
+              <div>
+                <input type="submit" value="Done" class="btn btn-primary btn-large">            
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!--/span-->
+
+    <div class="span6">
+      <div class="hero-unit">
+        <h1>Gamified!</h1>
+        <p>This is a node.js project made with the express.js MVC framework. It allows you to submit responses and look at them later on!</p>
+      </div>
+      <div class="row-fluid">
+        <div class="span4">
+          <h2>San Jose State University</h2>
+          <p> San Jose State University (often abbreviated San Jose State or SJSU) is a public university located in San Jose, California, United States. It is the founding campus of the California State University (CSU) system, and holds the distinction of being the oldest public institution of higher education on the West Coast of the United States.</p>
+        </div><!--/span-->
+        <div class="span4">
+          <h2>San Jose</h2>
+          <p>San Jose is the third-largest city in California, the tenth-largest in the United States, and the county seat of Santa Clara County. San Jose is the largest city within Silicon Valley, which is a major component of the greater San Francisco Bay Area. It is the largest city in Northern California.</p>
+        </div><!--/span-->
+      </div><!--/row-->
+    </div><!--/span-->
+  </div><!--/row-->
+
+  <hr>
+
+  <footer>
+    <p>&copy; Sneha 2013</p>
+  </footer>
+
+</div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/bootstrap-transition.js"></script>
+    <script src="javascripts/bootstrap-alert.js"></script>
+    <script src="javascripts/bootstrap-modal.js"></script>
+    <script src="javascripts/bootstrap-dropdown.js"></script>
+    <script src="javascripts/bootstrap-scrollspy.js"></script>
+    <script src="javascripts/bootstrap-tab.js"></script>
+    <script src="javascripts/bootstrap-tooltip.js"></script>
+    <script src="javascripts/bootstrap-popover.js"></script>
+    <script src="javascripts/bootstrap-button.js"></script>
+    <script src="javascripts/bootstrap-collapse.js"></script>
+    <script src="javascripts/bootstrap-carousel.js"></script>
+    <script src="javascripts/bootstrap-typeahead.js"></script>
+
   </body>
-</html>
+  </html>
